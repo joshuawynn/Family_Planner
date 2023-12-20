@@ -1,4 +1,4 @@
-# Family_To_Do_List - Fullstack Application
+# Family Tasks & Schedules - Fullstack Application
 
 ## Date: 12.06.2023
 
@@ -8,7 +8,7 @@
 
 ## Decription
 
-This project is a fullstack  Family to-do list application developed by Joshua Wynn. It provides a simple and intuitive interface to manage your a family's tasks and appointments.
+This project is a fullstack  Family to-do list application that focuses of tasks and schedules. It provides a simple and intuitive interface to manage your a family's tasks and schedules.
 
 ## Table of Contents
 
