@@ -1,6 +1,6 @@
 # Family Tasks & Schedules - Fullstack Application
 
-## Date: 12.06.2023
+## Date: 12.20.2023
 
 ### By: Joshua Wynn
 
@@ -50,7 +50,7 @@ This to-do list application allows users to create, read, and delete tasks effic
 
 ## Wireframe
 
-[Excalidraw](https://excalidraw.com/#json=4-kn6Cv3ufzea0RfDx040,BJTULGyH0EPBVnynwDYa7g)
+[Excalidraw](https://excalidraw.com/#json=q1zvSB0mRyFLj6_Wj_8Nn,E0E_-_hJzg7xdfUjCJyvuw)
 
 
 ## Trello 
