@@ -5,7 +5,7 @@
  */
 
 var app = require('../server');
-var debug = require('debug')('family-planner:server');
+var debug = require('debug')('mongoose-movies:server');
 var http = require('http');
 
 /**
