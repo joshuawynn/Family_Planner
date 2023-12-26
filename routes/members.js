@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// You'll be creating this controller module next
+const membersCtrl = require('../controllers/members');
 
-module.exports = router;
-var express = require('express');
-var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// GET /members
+router.get('/', membersCtrl.index);
+
+/* GET /members/new */
+router.get('/new', membersCtrl.new); 
+
+// POST /members
+router.post('/', membersCtrl.create);
+
 
 module.exports = router;

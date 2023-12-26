@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<h2>Enter a New Family Member</h2>
+<form action="/members" method="POST">
+  <label>Name:
+    <input type="text" name="name">
+  </label><br>
+  <label>Relation:
+    <input type="text" name="relation">
+  </label><br>
+  <label>Age:
+    <input type="number" name="age">
+  </label><br>
+  <label>Hobbies (separate hobbies with commas):
+    <input type="text" name="hobby">
+  </label><br>
+  <label>Feeling Sick?:
+    <input type="checkbox" name="feelingSick" checked>
+  </label><br>
+  <button type="submit">Add Family Member</button>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
