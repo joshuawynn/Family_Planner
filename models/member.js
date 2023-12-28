@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 
 const taskSchema = new Schema({
-  name: String, 
-  date: {
+  content: String, 
+  taskDate: {
     type: Date
   }
 },{
@@ -13,8 +13,8 @@ const taskSchema = new Schema({
 });
 
 const scheduleSchema = new Schema({
-  name: String, 
-  date:{
+  content: String, 
+  scheduleDate:{
     type: Date
   }
 },{

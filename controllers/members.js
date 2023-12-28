@@ -14,7 +14,7 @@ async function show(req, res) {
 function newMember(req, res) {
     // We'll want to be able to render an
     // errorMsg if the create action fails
-    res.render('members/new', { errorMsg: '' });
+    res.render('members/new', { title: 'Add Family Member', errorMsg: '' });
 }
 
 async function create(req, res) {

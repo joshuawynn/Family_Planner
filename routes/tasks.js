@@ -6,7 +6,7 @@ const tasksCtrl = require('../controllers/tasks');
 // POST /members/:id/tasks (create task for a family member)
 router.post('/members/:id/tasks', tasksCtrl.create);
 
-// Delete /reviews/:id
-router.delete('/tasks/:id', tasksCtrl.delete);
+// Delete /tasks/:id
+router.delete('/members/:mid/tasks/:id', tasksCtrl.delete);
 
 module.exports = router;

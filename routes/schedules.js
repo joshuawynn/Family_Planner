@@ -7,6 +7,6 @@ const schedulesCtrl = require('../controllers/schedules');
 router.post('/members/:id/schedules', schedulesCtrl.create);
 
 // Delete /reviews/:id
-router.delete('/schedules/:id', schedulesCtrl.delete);
+router.delete('/members/:mid/schedules/:id', schedulesCtrl.delete);
 
 module.exports = router;

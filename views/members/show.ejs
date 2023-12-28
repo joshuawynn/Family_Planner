@@ -42,10 +42,10 @@
           <tbody>
             <% member.tasks.forEach(t => { %>
               <tr>
-                <td><%= t.name %></td>
-                <td><%= t.date %></td>
+                <td><%= t.content %></td>
+                <td><%= t.taskDate %></td>
                 <td>
-                  <form action="/tasks/<%= t._id %>?_method=DELETE" method="POST">
+                  <form action="/members/<%= member._id %>/tasks/<%= t._id %>?_method=DELETE" method="POST">
                     <button type="submit">X</button>
                   </form>
                 </td>
@@ -63,8 +63,8 @@
     <form id="add-schedule-form" method="POST" action="/members/<%= member._id %>/schedules">
       <label>Schedule Name:</label>
       <textarea name="content"></textarea>
-      <label for="schedule">Task Date:
-      <input type="datetime-local" id="taskDate" name="taskDate">
+      <label for="scheduleDate">Task Date:
+      <input type="datetime-local" id="scheduleDate" name="scheduleDate">
       <input type="submit" value="Add Schedule">
     </form>
 
@@ -78,12 +78,12 @@
             </tr>
           </thead>
           <tbody>
-            <% member.schedules.forEach(t => { %>
+            <% member.schedules.forEach(s => { %>
               <tr>
-                <td><%= t.name %></td>
-                <td><%= t.date %></td>
+                <td><%= s.content %></td>
+                <td><%= s.scheduleDate %></td>
                 <td>
-                  <form action="/schedules/<%= t._id %>?_method=DELETE" method="POST">
+                  <form action="/members/<%= member._id %>/schedules/<%= s._id %>?_method=DELETE" method="POST">
                     <button type="submit">X</button>
                   </form>
                 </td>
