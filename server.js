@@ -12,6 +12,8 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var membersRouter = require('./routes/members');
+const tasksRouter = require('./routes/tasks');
+const schedulesRouter = require('./routes/schedules');
 
 var app = express();
 
@@ -27,10 +29,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/members', membersRouter);
+app.use('/', tasksRouter);
+app.use('/', schedulesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  console.log('Requested URL:', req.url);
+  next();
+  
+  // next(createError(404));
 });
 
 // error handler

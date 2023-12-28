@@ -1,0 +1,98 @@
+<%- include('../partials/header') %>
+
+  <section id="show-page">
+    <div>Name: </div>
+    <div>
+      <%= member.name %>
+    </div>
+    <div>Relation: </div>
+    <div>
+      <%= member.relation %>
+    </div>
+    <div>Age: </div>
+    <div>
+      <%= member.age %>
+    </div>
+    <div>Feeling Sick?: </div>
+    <div>
+      <%= member.feelingSick ? 'Yes' : 'Nope' %>
+    </div>
+  </section>
+
+
+  <br><br>
+  <h2>Tasks</h2>
+    <form id="add-task-form" method="POST" action="/members/<%= member._id %>/tasks">
+      <label>Task Name:</label>
+      <textarea name="content"></textarea>
+      <label for="taskDate">Task Date:
+      <input type="datetime-local" id="taskDate" name="taskDate">
+      <input type="submit" value="Add Task">
+    </form>
+
+    <% if (member.tasks.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Action</th> <!-- Added a header for the action column -->
+            </tr>
+          </thead>
+          <tbody>
+            <% member.tasks.forEach(t => { %>
+              <tr>
+                <td><%= t.name %></td>
+                <td><%= t.date %></td>
+                <td>
+                  <form action="/tasks/<%= t._id %>?_method=DELETE" method="POST">
+                    <button type="submit">X</button>
+                  </form>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <h5>No Tasks Yet</h5>
+      <% } %>
+
+
+      <br><br>
+  <h2>Schedules</h2>
+    <form id="add-schedule-form" method="POST" action="/members/<%= member._id %>/schedules">
+      <label>Schedule Name:</label>
+      <textarea name="content"></textarea>
+      <label for="schedule">Task Date:
+      <input type="datetime-local" id="taskDate" name="taskDate">
+      <input type="submit" value="Add Schedule">
+    </form>
+
+    <% if (member.schedules.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Action</th> <!-- Added a header for the action column -->
+            </tr>
+          </thead>
+          <tbody>
+            <% member.schedules.forEach(t => { %>
+              <tr>
+                <td><%= t.name %></td>
+                <td><%= t.date %></td>
+                <td>
+                  <form action="/schedules/<%= t._id %>?_method=DELETE" method="POST">
+                    <button type="submit">X</button>
+                  </form>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <h5>No Schedule Yet</h5>
+      <% } %>
+      
+      <%- include('../partials/footer') %>

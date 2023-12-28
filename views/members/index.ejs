@@ -21,6 +21,7 @@
         <td><%= m.hobby.join(', ') %></td>
         <!-- finish the ternary expression to display 'Yes' or 'Nope' -->
         <td><%= m.feelingSick ? 'Yes' : 'Nope' %></td>
+        <td><a href="/members/<%= m._id %>">View</a></td>
       </tr>
     <!-- Close the forEach using EJS here -->
     <% }); %>

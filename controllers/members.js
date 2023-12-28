@@ -5,6 +5,12 @@ async function index(req, res){
     res.render('members/index', { title: 'Family Members', members});
 }
 
+async function show(req, res) {
+    // Populate the cast array with performer docs instead of ObjectIds
+    const member = await Member.findById(req.params.id);
+    res.render('members/show', { title: 'Family Member View', member});
+  }
+
 function newMember(req, res) {
     // We'll want to be able to render an
     // errorMsg if the create action fails
@@ -32,7 +38,8 @@ async function create(req, res) {
 }
 
 module.exports = {
+    index,
+    show,
     new: newMember,
-    create,
-    index
+    create
 };
