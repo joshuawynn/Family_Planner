@@ -2,11 +2,16 @@ const Member = require('../models/member');
 
 async function deleteSchedule(req, res) {
   // Note the cool "dot" syntax to query on the property of a subdoc
+  try {
   const member = await Member.findById(req.params.mid)
   if (!member) return res.redirect('/members');
   member.tasks.remove(req.params.id);
   await member.save()
   res.redirect(`/members/${member._id}`);
+} catch (error) {
+  console.error("Error deleting schedule:", error);
+  res.status(500).send("Internal Server Error");
+}
 }
 
 
