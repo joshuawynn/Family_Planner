@@ -116,7 +116,7 @@ nav a.login {
 }
 
 nav a.login img {
-  width: 20px; /* Adjust the size as needed */
+  width: 30px; /* Adjust the size as needed */
   margin-left: 5px;
 }
 
@@ -146,4 +146,10 @@ nav a.login img {
 #add-schedule-form {
   flex: 1; /* Each form takes up an equal portion of the container */
   margin-right: 10px; /* Adjust as needed for spacing between forms */
+}
+
+th button,
+td button {
+  margin: 0 auto;
+  display: block;
 }
