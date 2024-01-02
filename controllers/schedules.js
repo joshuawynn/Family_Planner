@@ -5,7 +5,7 @@ async function deleteSchedule(req, res) {
   try {
   const member = await Member.findById(req.params.mid)
   if (!member) return res.redirect('/members');
-  member.tasks.remove(req.params.id);
+  member.schedules.remove(req.params.id);
   await member.save()
   res.redirect(`/members/${member._id}`);
 } catch (error) {

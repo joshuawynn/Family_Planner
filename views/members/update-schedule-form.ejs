@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<h2>Update Schedule</h2>
+<form id="update-schedule-form" method="POST" action="/members/<%= member._id %>/schedules/<%= schedule._id %>/update">
+  <label for="content">Schedule Name:</label>
+  <textarea name="content" id="content"><%= task.content %></textarea>
+  
+  <label for="scheduleDate">Schedule Date:</label>
+  <input type="datetime-local" id="scheduleDate" name="scheduleDate" value="<%= schedule.scheduleDate.toISOString().slice(0, 16) %>">
+  
+  <input type="submit" value="Update Schedule">
+</form>
+
+<%- include('../partials/footer') %>

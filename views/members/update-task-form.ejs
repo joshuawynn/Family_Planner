@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>Edit Task</h2>
+<h2>Update Task</h2>
 <form id="update-task-form" method="POST" action="/members/<%= member._id %>/tasks/<%= task._id %>/update">
   <label for="content">Task Name:</label>
   <textarea name="content" id="content"><%= task.content %></textarea>
