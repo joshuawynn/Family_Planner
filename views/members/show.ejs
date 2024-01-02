@@ -37,6 +37,7 @@
               <th>Name</th>
               <th>Date</th>
               <th>Action</th> <!-- Added a header for the action column -->
+              <th>Update</th> <!-- Added a header for the update column -->
             </tr>
           </thead>
           <tbody>
@@ -48,6 +49,9 @@
                   <form action="/members/<%= member._id %>/tasks/<%= t._id %>?_method=DELETE" method="POST">
                     <button type="submit">X</button>
                   </form>
+                </td>
+                <td>
+                  <a href="/members/<%= member._id %>/tasks/<%= t._id %>/update">Update</a>
                 </td>
               </tr>
             <% }); %>

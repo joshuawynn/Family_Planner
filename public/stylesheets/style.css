@@ -137,3 +137,13 @@ nav a.login img {
 #show-page div:nth-child(even) {
   color: #555;
 }
+
+.forms-container {
+  display: flex;
+}
+
+#add-task-form,
+#add-schedule-form {
+  flex: 1; /* Each form takes up an equal portion of the container */
+  margin-right: 10px; /* Adjust as needed for spacing between forms */
+}

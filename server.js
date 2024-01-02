@@ -1,5 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
+const cors = require("cors");
+const bodyParser = require("body-parser")
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -14,12 +16,21 @@ require('dotenv').config();
 require('./config/database');
 require('./config/passport');
 
+
+
 var indexRouter = require('./routes/index');
 var membersRouter = require('./routes/members');
 const tasksRouter = require('./routes/tasks');
 const schedulesRouter = require('./routes/schedules');
 
 var app = express();
+
+
+// middleware for cors to allow cross origin resource sharing
+app.use(cors());
+
+// middleware to convert our request data into JSON format
+app.use(bodyParser.json());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

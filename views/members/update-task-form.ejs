@@ -1,0 +1,10 @@
+<h2>Edit Task</h2>
+<form id="update-task-form" method="POST" action="/members/<%= member._id %>/tasks/<%= task._id %>/update">
+  <label for="content">Task Name:</label>
+  <textarea name="content" id="content"><%= task.content %></textarea>
+  
+  <label for="taskDate">Task Date:</label>
+  <input type="datetime-local" id="taskDate" name="taskDate" value="<%= task.taskDate.toISOString().slice(0, 16) %>">
+  
+  <input type="submit" value="Update Task">
+</form>
