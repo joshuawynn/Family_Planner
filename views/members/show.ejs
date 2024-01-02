@@ -36,7 +36,7 @@
             <tr>
               <th>Name</th>
               <th>Date</th>
-              <th>Action</th> <!-- Added a header for the action column -->
+              <th>Remove</th> <!-- Added a header for the action column -->
               <th>Update</th> <!-- Added a header for the update column -->
             </tr>
           </thead>
@@ -78,7 +78,8 @@
             <tr>
               <th>Name</th>
               <th>Date</th>
-              <th>Action</th> <!-- Added a header for the action column -->
+              <th>Remove</th> <!-- Added a header for the action column -->
+              <th>Update</th> <!-- Added a header for the update column -->
             </tr>
           </thead>
           <tbody>
@@ -90,6 +91,9 @@
                   <form action="/members/<%= member._id %>/schedules/<%= s._id %>?_method=DELETE" method="POST">
                     <button type="submit">X</button>
                   </form>
+                </td>
+                <td>
+                  <a href="/members/<%= member._id %>/schedules/<%= s._id %>/update">Update</a>
                 </td>
               </tr>
             <% }); %>

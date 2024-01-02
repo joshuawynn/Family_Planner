@@ -10,10 +10,10 @@ router.post('/members/:id/schedules', schedulesCtrl.create);
 router.delete('/members/:mid/schedules/:id', schedulesCtrl.delete);
 
 // Add route for rendering the update task form
-router.get('/members/:mid/schedules/:id/update', schedulesCtrl.renderUpdateSchedulesForm);
+router.get('/members/:mid/schedules/:id/update', schedulesCtrl.renderUpdateScheduleForm);
 
 // Add route for updating a task
-router.post('/members/:mid/schedules/:id/update', schedulesCtrl.updateTask);
+router.post('/members/:mid/schedules/:id/update', schedulesCtrl.updateSchedule);
 
 
 
