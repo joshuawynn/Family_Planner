@@ -45,7 +45,7 @@ async function renderUpdateTaskForm (req, res) {
       return res.status(404).json({ message: 'Task not found' });
     }
 
-    res.render('update-task-form', { member, task });
+    res.render('members/update-task-form', {title: 'Update Task', member, task });
   } catch (error) {
     console.error('Error rendering update task form:', error);
     return res.status(500).json({ message: 'Internal Server Error' });
@@ -74,6 +74,9 @@ async function updateTask(req, res) {
     member.tasks[taskIndex].taskDate = taskDate;
 
     await member.save();
+
+     // Redirect back to the show page after updating the task
+     return res.redirect(`/members/${mid}`);
 
     // Handle the updated task, send a response, etc.
     return res.status(200).json(member.tasks[taskIndex]);
