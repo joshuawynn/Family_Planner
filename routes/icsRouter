@@ -1,0 +1,15 @@
+const express = require('express');
+const icalController = require('../controllers/icsController'); // Update the path accordingly
+
+const router = express.Router();
+
+router.get('/download-ics', (req, res) => {
+  const iCalData = icalController.generateICalData();
+  const iCalString = ical.stringify(iCalData);
+
+  res.setHeader('Content-Type', 'text/calendar');
+  res.setHeader('Content-Disposition', 'attachment; filename=event.ics');
+  res.send(iCalString);
+});
+
+module.exports = router;
