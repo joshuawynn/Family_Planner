@@ -1,22 +1,10 @@
 <%- include('../partials/header') %>
 
   <section id="show-page">
-    <div>Name: </div>
-    <div>
-      <%= member.name %>
-    </div>
-    <div>Relation: </div>
-    <div>
-      <%= member.relation %>
-    </div>
-    <div>Age: </div>
-    <div>
-      <%= member.age %>
-    </div>
-    <div>Feeling Sick?: </div>
-    <div>
-      <%= member.feelingSick ? 'Yes' : 'Nope' %>
-    </div>
+    <div>Name:  <%= member.name %></div>
+    <div>Relation: <%= member.relation %></div>
+    <div>Age: <%= member.age %></div>
+    <div>Feeling Sick?:  <%= member.feelingSick ? 'Yes' : 'Nope' %></div>
   </section>
 
 

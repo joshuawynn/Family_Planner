@@ -1,6 +1,8 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black; /* Set the background color to black */
+  color: #fff; /* Set text color to white */
 }
 
 a {
@@ -30,7 +32,7 @@ body {
 }
 
 h2 {
-  color: #333;
+  color: white;
 }
 
 table {
@@ -70,14 +72,15 @@ input[type="datetime-local"] {
 
 button {
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #008080; /* Dark Turquoise */
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #006666; /* Darker Turquoise on hover */
 }
 
 #errorMsg {
@@ -86,17 +89,20 @@ button:hover {
 
 #show-page {
   margin-bottom: 20px;
+  margin-top: 20px; 
+  color: #fff;
 }
 
 nav {
-  background-color: #4caf50;
+  margin-bottom: 20px;
+  background-color: #008080; /* Dark Turquoise for the nav bar */
   padding: 10px 20px;
   display: flex;
   align-items: center;
 }
 
 nav img {
-  width: 40px; /* Adjust the size as needed */
+  width: 40px;
   margin-right: 20px;
 }
 
@@ -116,13 +122,14 @@ nav a.login {
 }
 
 nav a.login img {
-  width: 30px; /* Adjust the size as needed */
+  width: 30px;
   margin-left: 5px;
 }
 
-
 #show-page {
   margin-bottom: 20px;
+  font-weight: bold;
+  font: 20px;
 }
 
 #show-page div {
@@ -131,11 +138,12 @@ nav a.login img {
 
 #show-page div:nth-child(odd) {
   font-weight: bold;
-  color: #333;
+  color: white
 }
 
 #show-page div:nth-child(even) {
-  color: #555;
+  font-weight: bold;
+  color: white;
 }
 
 .forms-container {
@@ -144,8 +152,8 @@ nav a.login img {
 
 #add-task-form,
 #add-schedule-form {
-  flex: 1; /* Each form takes up an equal portion of the container */
-  margin-right: 10px; /* Adjust as needed for spacing between forms */
+  flex: 1;
+  margin-right: 10px;
 }
 
 th button,

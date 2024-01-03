@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>Fam</h2>
+<h2>Family Members</h2>
 <table>
   <thead>
     <tr>
@@ -20,7 +20,7 @@
         <td><%= m.age %></td>
         <td><%= m.hobby.join(', ') %></td>
         <!-- finish the ternary expression to display 'Yes' or 'Nope' -->
-        <td><%= m.feelingSick ? 'Yes' : 'Nope' %></td>
+        <td><%= m.feelingSick ? 'Yes' : 'No' %></td>
         <% if (user) { %>
         <td><a href="/members/<%= m._id %>">View</a></td>
         <% } %>
