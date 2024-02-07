@@ -19,6 +19,9 @@ This project is a fullstack  Family to-do list application that focuses of tasks
 - [Wireframe](#wireframe)
 - [Trello](#trello)
 
+## Deployed App
+
+[Family Planner](https://family-planner-7ef3d46e1eaf.herokuapp.com/members)
 
 ## Introduction
 
